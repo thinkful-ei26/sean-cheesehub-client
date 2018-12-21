@@ -16,6 +16,7 @@ const fetchCheesesError = (err) => ({
 
 export const fetchCheeses = () => dispatch => {
   dispatch(fetchCheesesRequest());
+  console.log(`${API_BASE_URL}/api/cheeses`);
   fetch(`${API_BASE_URL}/api/cheeses`)
     .then(res => {
       if (!res.ok) return Promise.reject(res.statusText);
