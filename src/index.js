@@ -6,7 +6,9 @@ import store from './store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <CheeseList cheeses={["Bath Blue", "Barkham Blue", "Buxton Blue"]} />,
+  <Provider store={store}>
+    <CheeseList />
+  </Provider>,
   document.getElementById('root')
 );
 
